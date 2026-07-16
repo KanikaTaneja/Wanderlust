@@ -1,0 +1,88 @@
+body{
+     font-family: "plus Jakarta Sans" , sans-serif !important;
+     display: flex  ;
+     flex-direction:column ;
+     min-height: 100vh;
+}
+.container{
+    flex:1;
+}
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link {
+    color: #222222 !important;
+}
+.navbar-nav a {
+    background-color: white;
+}
+
+/* footer  */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+.f-info-links {
+    width: 100%;
+}
+.f-info-socials{
+    width: 100%;
+    font-size:x-large;
+}
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.listing-card{
+    border:none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important; 
+    height: 200px;
+    width: 100%;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text {
+    font-weight: 400px !important;
+}
+/* new page */
+.add-btn{
+   background-color: #fe424d !important;
+   border: none !important;
+}
+/* edit page */
+.edit-btn{
+     background-color: #fe424d !important;
+   border: none !important;
+   width: 70px;
+   height:38px;
+}
+/* show page */
+.show-img{
+    width: 350px !important;
+    height:30vh
+}
+/* map styling */
+#map {
+    height: 400px;
+    width: 100vh;
+    border-radius: 10px; /* Optional: rounds the map edges beautifully */
+}

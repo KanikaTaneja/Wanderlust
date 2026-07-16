@@ -1,0 +1,65 @@
+<style>
+  .btn-search{
+    background-color: #fe424d;
+    color: white;
+    border-radius: 2rem;
+    padding: 0 1rem 0 1rem;
+  }
+ .btn-search:hover{
+    background-color: #fe424d;
+    color: white;
+    border-radius: 2rem;
+  }
+  .btn-search i {
+    display: inline;
+    margin-right: 7px;
+  }
+  .search-bar{
+    border: 1px solid black;
+    padding: 11px;
+     border-radius: 2rem;
+  }
+  .form-input {
+     border-radius: 2rem;
+     width: 100px;
+  }
+  
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top ">
+  <div class="container-fluid mb-1">
+    <a class="navbar-brand" href="/listings" style="font-size: x-large;"><i class="fa-regular fa-compass"></i>Wanderlust</a>
+    <button 
+    class="navbar-toggler" 
+    type="button" 
+    data-bs-toggle="collapse" 
+    data-bs-target="#navbarNavAltMarkup" 
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Explore</a>
+      </div>
+      <div class="navbar-nav ms-auto search-bar">
+        <form class="d-flex" role="search">
+          <input class="form-control form-input  me-2" type="search" placeholder="Where" aria-label="Search"/>
+          <input class="form-control me-2" type="search" placeholder="When" aria-label="Search"/>
+          <input class="form-control me-2" type="search" placeholder="Who" aria-label="Search"/>
+          <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </form>
+      </div>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+          <% if (!currentUser) { %>
+              <a class="nav-link"  href="/signup"><b>Sign up</b></a>
+              <a class="nav-link" href="/login"><b>Login</b></a>
+          <% } %>
+          <% if (currentUser) { %>
+              <a class="nav-link" href="/logout"><b>Log out</b></a>
+          <% } %>
+        
+       </div>
+    </div>
+  </div>
+</nav>
