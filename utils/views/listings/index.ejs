@@ -1,6 +1,61 @@
 <% layout("/layouts/boilerplate") -%>
 
-    <style>
+<style>
+  .card-container {
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+ #filters-wrapper {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+#filters {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+#filters::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.filter {
+  text-align: center;
+  flex: 0 0 auto; /* prevent shrinking/wrapping, keep natural size */
+  margin-right: 2rem;
+  margin-top: 2rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  #filters-wrapper {
+    margin-left: 1rem !important; /* override ms-5 on mobile */
+    margin-right: 1rem;
+  }
+  .filter {
+    margin-right: 1.2rem;
+    margin-top: 1rem;
+  }
+  .filter i {
+    font-size: 0.9rem;
+  }
+  .filter p {
+    font-size: 0.7rem;
+  }
+  .tax-toggle {
+    margin-top: 1rem;
+    height: auto;
+    padding: 8px 12px;
+  }
+}
+</style>
+
+
+    <!-- <style>
       #filters{
         display: flex;  
         /* to bring all icons in came line */
@@ -43,76 +98,113 @@
     }
     .form-check-label{
         font-size:14px;
-        border-radius: 1rem ;
+        border-radius: 25px ;
     }
     
-         
-      
-    </style>
+    .card-container{
+      margin: 0 auto;
+      max-width: 1400px;
+    }
 
+  /* @media (max-width: 767px) {
+  div.container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 16px;   */
+    /* Leaves a clean, tiny space at the edges */
+    /* padding-right: 16px;
+    width: 100%;        */
+      /* Ensures it spans the full screen width */
+  /* }
+} */
 
-  <div id="filters" class="ms-5">
-      <div class="filter">
-        <div><i class="fa-solid fa-fire"></i> </div>
-        <p>Trending</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-bed"></i></div>
-        <p>Rooms</p>
-      </div>
-       <div class="filter">
-        <div><i class="fa-solid fa-tree-city"></i></div>
-        <p>Iconic cities</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-bed"></i></div>
-        <p>farms</p>
-      </div>
-       <div class="filter">
-        <div><i class="fa-solid fa-panorama"></i></div>
-        <p>Amazing views</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-umbrella-beach"></i></div>
-        <p>Beach</p>
-      </div>
-       <div class="filter">
-        <div><i class="fa-solid fa-person-swimming"></i></div>
-        <p>Amazing pools</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-house-flag"></i></div>
-        <p>Cabins</p>
-      </div>
-       <div class="filter">
-        <div><i class="fa-solid fa-fire"></i> </div>
-        <p>Trending</p>
-      </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-bed"></i></div>
-        <p>Rooms</p>
-      </div>
-       <div class="filter">
-        <div><i class="fa-solid fa-fire"></i> </div>
-        <p>Trending</p>
-      </div>
-    <!-- // toggle    -->
-    <div class="tax-toggle">
-        <div class="form-check form-switch ms-auto box ">
-            <input 
-            class="form-check-input" 
-            type="checkbox" 
-            role="switch" 
-            id="switchCheckDefault">
-            <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
-        </div>
+        
+    </style> -->
+
+<div id="filters-wrapper" >
+
+  <div id="filters" class="ms-1">
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
     </div>
-    
+    <div class="filter">
+      <div><i class="fa-solid fa-bed"></i></div>
+      <p>Rooms</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-tree-city"></i></div>
+      <p>Iconic cities</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-bed"></i></div>
+      <p>farms</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-panorama"></i></div>
+      <p>Amazing views</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-umbrella-beach"></i></div>
+      <p>Beach</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-person-swimming"></i></div>
+      <p>Amazing pools</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-house-flag"></i></div>
+      <p>Cabins</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-bed"></i></div>
+      <p>Rooms</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
+    </div>
+  </div> <!-- closes #filters -->
+
+  <div class="tax-toggle">
+    <div class="form-check form-switch ms-auto box">
+      <input 
+        class="form-check-input" 
+        type="checkbox" 
+        role="switch" 
+        id="switchCheckDefault">
+      <label 
+        class="form-check-label" 
+        for="switchCheckDefault">
+        Display total after taxes
+      </label>
+    </div>
   </div>
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ms-5 mt-3">
+
+</div> <!-- closes #filters-wrapper -->
+
+  
+   <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 mt-3 card-container">
+<!-- <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 mt-3 card-container"> -->
 <% for( let list of listings ) { %>
    
-    <div class="card col listing-card" style="width: 18rem;">
+    <div class="card col listing-card">
          <a href="/listings/<%= list._id %>" style="text-decoration: none;">
 
             <img src="<%= list.image.url %>" class="card-img-top" alt="listing img">
