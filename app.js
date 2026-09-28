@@ -19,6 +19,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const user = require("./models/user.js");
 const helmet = require("helmet");
+const port = process.env.PORT || 3000;
 
 const dbURL = process.env.ATLASDB_URL;
 
@@ -39,11 +40,17 @@ const sessionoperations = {
   resave: false,
   saveUninitialized: true,
   cookie :{
-    expires : Date.now() + 7*24*60*60*1000,
+    expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
     maxAge: 7*24*60*60*1000,
     httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
   }
 }
+
+if (process.env.NODE_ENV === "production") {
+    app.set("trust proxy", 1);
+}
+
 app.use(session(sessionoperations));
 app.use(flash());
 
@@ -123,6 +130,7 @@ app.use((err, req, res, next) => {
   res.status(status).render("listings/error" , {err});
 });
 
-app.listen(3000 , (req,res)=>{
-console.log(" server 3000 is working");
+
+app.listen(port , (req,res)=>{
+console.log(`Server ${port} is working`);
 });
